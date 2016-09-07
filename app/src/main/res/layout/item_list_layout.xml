@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp"
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:layout_height="wrap_content">
+
+   <android.support.v7.widget.CardView
+       android:id="@+id/card"
+       android:elevation="3dp"
+       android:clickable="true"
+       app:cardElevation="6dp"
+       android:foreground="?android:attr/selectableItemBackground"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           > <ImageView
+           android:layout_width="match_parent"
+           android:id="@+id/iv"
+           android:src="@drawable/start"
+           android:scaleType="centerCrop"
+           android:layout_height="120dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="-20dp"
+            android:background="@color/translucent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="2016/06/02"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+           <TextView
+               android:id="@+id/content"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:lines="2"
+               android:maxLines="2"
+               android:ellipsize="end"
+               android:paddingBottom="10dp"
+               android:paddingTop="6dp"
+               android:freezesText="true"
+               android:text="一个人的记忆是真真 的 是放假了解放路上几分，是放假了解放路上几分是放假了解放路上几分一个人的记忆是真真 的 是放假了解放路上几分"
+               />
+       </LinearLayout>
+
+
+
+   </android.support.v7.widget.CardView>
+
+</RelativeLayout>

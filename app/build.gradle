@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.szhua.foryou"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    //删除META-INF信息
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/maven/com.google.code.gson/gson/pom.xml'
+        exclude 'META-INF/maven/com.google.code.gson/gson/pom.properties'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile project(':jar')
+    //bmob-sdk
+    compile 'cn.bmob.android:bmob-sdk:3.5.1'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile project(':circularanim')
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:cardview-v7:24.0.0'
+}

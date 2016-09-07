@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffb6c1</color>
+    <color name="colorstart">#66ffb6c1</color>
+    <color name="colorPrimaryDark">#ffb6c1</color>
+    <color name="colorAccent">#ffb6c1</color>
+   <color name="themeColor">#ffb6c1</color>
+    <!-- 主要界面的background暂定为这个色值 -->
+    <color name="windowBackground">#f0f0f0</color>
+    <color name="divider">#e0e0e0</color>
+    <color name="windowBackColor2">#f6f6f6</color>
+    <!-- 常用TextColor -->
+    <color name="text_black">#2f2f2f</color>
+    <color name="text_gray_dark">#7a7a7a</color>
+    <color name="text_gray">#aaaaaaaa</color>
+    <!-- 半透明颜色 -->
+    <color name="translucent">#66000000</color>
+    <!-- 半透明白色 -->
+    <color name="translucent_white">#66FFFFFF</color>
+    <!--透明色-->
+    <color name="transparent_normal">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="theme_color">#ffb6c1</color>
+    <color name="tab_bg">#FFFFFF</color>
+    <color name="tab_text_color_press">#008cc8</color>
+    <color name="tab_text_color">#7a7a7a</color>
+    <color name="light_whihe">#66FFFFFF</color>
+    <color name="message_color">#fd6928</color>
+    <color name="button_press_color">#00aae7</color>
+    <color name="dark_gray">#aaaaaa</color>
+
+ <color name="color1">#ff8a6c</color>
+ <color name="color2">#ffc279</color>
+ <color name="color3">#e5ec4c</color>
+
+ <color name="spark_primary_color">#FFFFC107</color>
+ <color name="spark_secondary_color">#FFFF5722</color>
+</resources>

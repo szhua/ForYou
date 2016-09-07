@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.szhua.foryou.activity.HomeActivity">
+    
+    
+
+   <RelativeLayout
+       android:id="@+id/header"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:id="@+id/title"
+           android:textSize="18sp"
+           android:gravity="center"
+           android:textColor="@color/white"
+           android:background="@color/colorPrimary"
+           android:layout_width="match_parent"
+           android:layout_height="48dp"
+           android:text="ForYou"
+           />
+
+       <TextView
+           android:id="@+id/more"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:text="更多"
+           android:layout_alignParentRight="true"
+           android:gravity="center"
+           android:paddingLeft="16dp"
+           android:paddingRight="16dp"
+           android:textSize="16sp"
+           android:textColor="@color/white"
+           />
+
+   </RelativeLayout>
+
+    <View
+        android:layout_below="@id/header"
+        style="@style/Divider"
+        android:id="@+id/divider"
+        ></View>
+   <!--<com.szhua.foryou.lib.HorizontalRefreshLayout-->
+       <!--android:layout_below="@id/divider"-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="match_parent"-->
+       <!--android:id="@+id/refresh"-->
+       <!--&gt;-->
+       <android.support.v4.view.ViewPager
+           android:layout_below="@id/divider"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/viewpager"
+           ></android.support.v4.view.ViewPager>
+   <!--</com.szhua.foryou.lib.HorizontalRefreshLayout>-->
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/fla"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginBottom="30dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:src="@android:drawable/ic_dialog_email"
+    />
+
+
+
+
+
+        <com.szhua.foryou.sparbutton.SparkButton
+            android:visibility="gone"
+            android:clickable="false"
+            android:id="@+id/star_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            app:sparkbutton_activeImage="@drawable/ic_heart_on"
+            app:sparkbutton_animationSpeed=".85"
+            android:layout_centerInParent="true"
+            app:sparkbutton_iconSize="30dp"
+            app:sparkbutton_inActiveImage="@drawable/ic_heart_off" />
+
+
+
+    <com.szhua.foryou.blurredview.BubbleView
+        android:id="@+id/BubbleView"
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   </com.szhua.foryou.blurredview.BubbleView>
+
+</RelativeLayout>
