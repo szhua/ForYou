@@ -2,7 +2,9 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
+
 
     defaultConfig {
         applicationId "com.szhua.foryou"
@@ -17,8 +19,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.compileOptions.sourceCompatibility 1.8
+    android.compileOptions.targetCompatibility 1.8
+    android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
     //删除META-INF信息
     packagingOptions {
         exclude 'META-INF/rxjava.properties'
@@ -37,7 +44,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile project(':jar')
     //bmob-sdk
-    compile 'cn.bmob.android:bmob-sdk:3.5.1'
+    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile 'cn.bmob.android:http-legacy:1.0'
+
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+// Because RxAndroid releases are few and far between, it is recommended you also
+// explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile project(':circularanim')

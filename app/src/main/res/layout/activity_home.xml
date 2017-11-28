@@ -72,8 +72,6 @@
 
 
 
-
-
         <com.szhua.foryou.sparbutton.SparkButton
             android:visibility="gone"
             android:clickable="false"

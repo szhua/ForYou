@@ -1,6 +1,7 @@
 package com.szhua.foryou.utils;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,22 @@ import java.util.regex.Pattern;
  * Created by Administrator on 2015/11/2 0002.
  */
 public class UiUtil {
+
+
+    private   static  Toast mToast;
+    public static void showToast(Context context , String text) {
+        if (!TextUtils.isEmpty(text)) {
+            if (mToast == null) {
+                mToast = Toast.makeText(context, text,
+                        Toast.LENGTH_SHORT);
+            } else {
+                mToast.cancel();
+                mToast.setText(text);
+            }
+            mToast.show();
+        }
+    }
+
 
 
     /*
